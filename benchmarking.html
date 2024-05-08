@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Benchmarking &middot; AstroMLab
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./public/css/poole.css">
+  <link rel="stylesheet" href="./public/css/syntax.css">
+  <link rel="stylesheet" href="./public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="./atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          AstroMLab
+        </a>
+      </h1>
+      <p class="lead">Steering astronomy into the age of autonomy! <br> Builder of AstroLLaMA</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="./index.html">Home</a>
+
+      
+
+      
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="./benchmarking.html">Benchmarking</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="./goal.html">Our Goal</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="./ollama.html">Running Models on Your Laptops</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="./why_astronomy.html">Why LLMs for Astronomy?</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://huggingface.co/AstroMLab">Download Models on Hugging Face</a> 
+    </nav>
+
+    <p>&copy; 2024. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+        <h1 class="page-title">Benchmarking</h1>
+      <div class="page">
+  <p>One of the key exciting aspects of exploring astronomy LLMs is the unprecedented opportunity they provide for benchmarking capabilities that were previously difficult to quantify.</p>
+
+<p>The progress of astronomy requires a myriad of logical skills, from <strong>mathematical derivation</strong> and <strong>physical insights</strong> to <strong>statistical modeling</strong>. The combination of these skills often lies somewhere between <em>factual retrieval</em>, <em>competitive mathematics derivation</em>, and <em>common sense AI</em>, making it challenging to assess the performance of LLMs in this domain.</p>
+
+<p>However, until now, there has been a <strong>significant void</strong> in terms of <em>golden question and answering datasets</em> specifically tailored to scientific reasoning, which are essential for testing these models. To address this gap, a key focus of our research is to <strong>establish the standard for Q&amp;A</strong> in the non-trivial field of astronomy that has remained largely unexplored.</p>
+
+<p>We have recently released our <strong>benchmarking datasets</strong> <strong><a href="">here</a></strong>, and the details of how we curated these datasets are currently being documented. Using this data set, we have compared our myriad of <em>specialized models</em> among themselves and against other <em>open-source models</em>, demonstrating a notable improvement in their abilities. The detailed benchmarking results can be found below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model Name</th>
+      <th>Base Model</th>
+      <th>BLEU Score</th>
+      <th>Factual Responses</th>
+      <th>Perplexity</th>
+      <th>Embedding Quality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LLaMa-2-7b</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-7b</td>
+      <td>LLaMa-2-7b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-chat-7b</td>
+      <td>AstroLLaMA-7b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>LLaMa-2-70b</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-70b</td>
+      <td>LLaMa-2-70b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Phi-2</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-Phi-2</td>
+      <td>Phi-2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Phi-3</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-Phi-3</td>
+      <td>Phi-3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mistral-7b</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-Mistral-7b</td>
+      <td>Mistral-7b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>LLaMa-3b-8b</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-LLaMa-3b-8b</td>
+      <td>LLaMa-3b-8b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>QWen-7b</td>
+      <td>-</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-QWen-7b</td>
+      <td>QWen-7b</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

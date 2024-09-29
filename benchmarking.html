@@ -11,7 +11,7 @@
 
   <title>
     
-      Benchmarking &middot; AstroMLab
+      AstroBench &middot; AstroMLab
     
   </title>
 
@@ -50,13 +50,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="./benchmarking.html">Benchmarking</a>
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="./goal.html">Our Goal</a>
+            <a class="sidebar-nav-item active" href="./benchmarking.html">AstroBench</a>
           
         
       
@@ -66,7 +60,7 @@
       
         
           
-            <a class="sidebar-nav-item" href="./ollama.html">Running Models on Your Laptops</a>
+            <a class="sidebar-nav-item" href="./ollama.html">Running Models on Your Laptop</a>
           
         
       
@@ -87,150 +81,469 @@
 
     <div class="content container">
       <div class="page">
-        <h1 class="page-title">Benchmarking</h1>
+        <h1 class="page-title">AstroBench</h1>
       <div class="page">
-  <p>One of the key exciting aspects of exploring astronomy LLMs is the unprecedented opportunity they provide for benchmarking capabilities that were previously difficult to quantify.</p>
+  <p>Exploring astronomy LLMs provides an unprecedented opportunity to quantify capabilities that were previously difficult to assess. The progress of astronomy requires a myriad of logical skills. These skills often combine elements of <em>factual retrieval</em>, <em>competitive mathematics derivation</em>, and <em>common sense AI</em>, making it challenging to assess LLM performance in this domain.</p>
 
-<p>The progress of astronomy requires a myriad of logical skills, from <strong>mathematical derivation</strong> and <strong>physical insights</strong> to <strong>statistical modeling</strong>. The combination of these skills often lies somewhere between <em>factual retrieval</em>, <em>competitive mathematics derivation</em>, and <em>common sense AI</em>, making it challenging to assess the performance of LLMs in this domain.</p>
+<h2 id="addressing-the-gap-in-scientific-reasoning-datasets">Addressing the Gap in Scientific Reasoning Datasets</h2>
 
-<p>However, until now, there has been a <strong>significant void</strong> in terms of <em>golden question and answering datasets</em> specifically tailored to scientific reasoning, which are essential for testing these models. To address this gap, a key focus of our research is to <strong>establish the standard for Q&amp;A</strong> in the non-trivial field of astronomy that has remained largely unexplored.</p>
+<p>Until recently, there was a <strong>significant void</strong> in <em>golden question and answering datasets</em> specifically tailored to scientific reasoning in astronomy. To address this gap, we have focused on <strong>establishing the standard for astronomical Q&amp;A</strong> in this non-trivial and largely unexplored field.</p>
 
-<p>We have recently released our <strong>benchmarking datasets</strong> <strong><a href="">here</a></strong>, and the details of how we curated these datasets are currently being documented. Using this data set, we have compared our myriad of <em>specialized models</em> among themselves and against other <em>open-source models</em>, demonstrating a notable improvement in their abilities. The detailed benchmarking results can be found below:</p>
+<h2 id="our-benchmarking-dataset">Our Benchmarking Dataset</h2>
+
+<p>In collaboration with Argonne National Laboratory, we have developed detailed astronomical benchmarking datasets comprising both Q&amp;A and Multiple Choice Question (MCQ) components. These datasets are designed to:</p>
+
+<ul>
+  <li>Evaluate LLM performance in astronomical research contexts</li>
+  <li>Test astronomical facts and community consensus</li>
+  <li>Assess models’ abilities to link insights across diverse subfields</li>
+  <li>Gauge understanding of the interdisciplinary nature of astronomical research</li>
+</ul>
+
+<h2 id="our-benchmarking-dataset-1">Our Benchmarking Dataset</h2>
+
+<p>We have developed a comprehensive astronomical benchmarking dataset, designed to evaluate LLM performance in astronomical research contexts. Key features include:</p>
+
+<ul>
+  <li><strong>Source</strong>: 885 articles from the Annual Review of Astronomy and Astrophysics (ARAA), 1963-2023</li>
+  <li><strong>Format</strong>: 4,425 multiple-choice questions, each with four options (A, B, C, D) and one correct answer</li>
+  <li><strong>Quality Control</strong>:
+    <ul>
+      <li>Questions are specific to article content but general enough for independent use</li>
+      <li>Answers are general, not pointing to specific sections</li>
+      <li>Answer options are balanced in length</li>
+    </ul>
+  </li>
+  <li><strong>Explanation and Citation</strong>: Each question includes an explanation and supporting paragraphs from the review</li>
+  <li><strong>Human Validation</strong>: Experts reviewed a subset of questions to ensure adequacy</li>
+</ul>
+
+<h3 id="example-questions">Example Questions</h3>
+
+<p>Here are some examples from our dataset:</p>
+
+<div style="background-color: #e6f3ff; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+<strong>Topic: Quasar Number Density</strong><br />
+<br />
+
+<strong>Question:</strong> What is the primary reason for the decline in the number density of luminous quasars at redshifts greater than 5?<br />
+<br />
+
+<strong>A)</strong> A decrease in the overall star formation rate, leading to fewer potential host galaxies for quasars. <br />
+
+<strong>B)</strong> An increase in the neutral hydrogen fraction in the intergalactic medium, which obscures the quasars' light. <br />
+
+<strong>C)</strong> A decrease in the number of massive black hole seeds that can form and grow into supermassive black holes. <br />
+
+<strong>D)</strong> An increase in the average metallicity of the Universe, leading to a decrease in the efficiency of black hole accretion. <br />
+
+<br />
+<strong>Correct Answer:</strong> C
+</div>
+
+<div style="background-color: #fff0e6; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+<strong>Topic: Cosmological Simulations</strong><br />
+<br />
+
+<strong>Question:</strong> What is the primary goal of calibrating subgrid feedback models in cosmological simulations?<br />
+<br />
+
+<strong>A)</strong> To ensure that simulations accurately reproduce the observed properties of the interstellar medium.<br />
+
+<strong>B)</strong> To create a diverse range of galaxy morphologies in the simulations.<br />
+
+<strong>C)</strong> To achieve convergence in simulation results across different resolutions and box sizes.<br />
+
+<strong>D)</strong> To steer simulations towards producing a broadly realistic galaxy population that is consistent with key observational constraints.<br />
+
+<br />
+<strong>Correct Answer:</strong> D
+</div>
+
+<div style="background-color: #e6ffe6; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+<strong>Topic: Circumgalactic Medium</strong><br />
+<br />
+
+<strong>Question:</strong> The properties of the circumgalactic medium (CGM) primarily depend on the competition between: <br />
+<br />
+
+<strong>A)</strong> Star formation rate and supernova feedback.<br />
+
+<strong>B)</strong> Gas cooling and stellar winds.<br />
+
+<strong>C)</strong> Gravity-driven infall and gas cooling. <br />
+
+<strong>D)</strong> Magnetic fields and thermal conduction. <br />
+
+<br />
+<strong>Correct Answer:</strong> C
+</div>
+
+<p>These examples demonstrate the depth and breadth of astronomical knowledge covered in our benchmarking dataset, ensuring a robust evaluation of LLM capabilities in this field.</p>
+
+<h2 id="benchmarking-results">Benchmarking Results</h2>
+
+<p>Our benchmarking results reveal significant variations in performance across different proprietary large language models when tested on astronomy-specific questions. The following table summarizes the scores achieved by various models, grouped by their respective series. These results provide insights into the current capabilities of LLMs in handling complex astronomical concepts and questions. For a more comprehensive analysis and detailed discussion of these results, please refer to <a href="https://arxiv.org/abs/2407.11194">Ting et al. (2024)</a>.</p>
+
+<p><strong>Proprietary models:</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th>Model Name</th>
-      <th>Base Model</th>
-      <th>BLEU Score</th>
-      <th>Factual Responses</th>
-      <th>Perplexity</th>
-      <th>Embedding Quality</th>
+      <th>Model</th>
+      <th>Score (%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>LLaMa-2-7b</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td><strong>OpenAI/GPT Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-7b</td>
-      <td>LLaMa-2-7b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>GPT-3.5</td>
+      <td>70.4</td>
+    </tr>
+    <tr>
+      <td>GPT-4</td>
+      <td>74.5</td>
+    </tr>
+    <tr>
+      <td>GPT-4o</td>
+      <td>80.4 🥉</td>
+    </tr>
+    <tr>
+      <td><strong>Anthropic/Claude Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-chat-7b</td>
-      <td>AstroLLaMA-7b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Claude-2.0</td>
+      <td>75.3</td>
+    </tr>
+    <tr>
+      <td>Claude-3.0-Haiku</td>
+      <td>77.9</td>
+    </tr>
+    <tr>
+      <td>Claude-3.0-Sonnet</td>
+      <td>76.7</td>
+    </tr>
+    <tr>
+      <td>Claude-3.0-Opus</td>
+      <td>82.7 🥈</td>
+    </tr>
+    <tr>
+      <td>Claude-3.5-Sonnet</td>
+      <td><strong>85.0</strong> 🥇</td>
+    </tr>
+    <tr>
+      <td><strong>Google/Gemini Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>LLaMa-2-70b</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Gemini-1.0-Pro</td>
+      <td>71.0</td>
+    </tr>
+    <tr>
+      <td>Gemini-1.5-Flash</td>
+      <td>73.6</td>
+    </tr>
+    <tr>
+      <td>Gemini-1.5-Pro</td>
+      <td>77.6</td>
+    </tr>
+    <tr>
+      <td><strong>Zhipu(智谱)/GLM Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-70b</td>
-      <td>LLaMa-2-70b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>GLM-3-Turbo</td>
+      <td>64.3</td>
+    </tr>
+    <tr>
+      <td>GLM-4-Flash</td>
+      <td>67.1</td>
+    </tr>
+    <tr>
+      <td>GLM-4-Air</td>
+      <td>72.9</td>
+    </tr>
+    <tr>
+      <td>GLM-4-AirX</td>
+      <td>72.5</td>
+    </tr>
+    <tr>
+      <td>GLM-4-0520</td>
+      <td>75.1</td>
+    </tr>
+    <tr>
+      <td><strong>Baidu/ERNIE(文心一言) Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>Phi-2</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>ERNIE-3.5</td>
+      <td>72.1</td>
+    </tr>
+    <tr>
+      <td>ERNIE-4.0</td>
+      <td>75.1</td>
+    </tr>
+    <tr>
+      <td><strong>Deepseek(深度求索) Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-Phi-2</td>
-      <td>Phi-2</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Deepseek-v2</td>
+      <td>73.6</td>
+    </tr>
+    <tr>
+      <td><strong>Step(阶跃星辰) Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>Phi-3</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Step-1</td>
+      <td>75.2</td>
+    </tr>
+    <tr>
+      <td>Step-2</td>
+      <td>76.6</td>
+    </tr>
+    <tr>
+      <td><strong>ByteDance/Doubao(豆包) Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-Phi-3</td>
-      <td>Phi-3</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Doubao-Lite</td>
+      <td>60.5</td>
+    </tr>
+    <tr>
+      <td>Doubao-Pro</td>
+      <td>70.1</td>
+    </tr>
+    <tr>
+      <td><strong>MiniMax AI Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>Mistral-7b</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>ABAB-5.5</td>
+      <td>69.5</td>
+    </tr>
+    <tr>
+      <td>ABAB-6.5</td>
+      <td>72.7</td>
+    </tr>
+    <tr>
+      <td><strong>01/Yi(零一万物) Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>AstroLLaMA-Mistral-7b</td>
-      <td>Mistral-7b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Yi-Medium</td>
+      <td>70.3</td>
+    </tr>
+    <tr>
+      <td>Yi-Large</td>
+      <td>77.3</td>
+    </tr>
+    <tr>
+      <td><strong>Moonshot(月之暗面)/Kimi Series</strong></td>
       <td> </td>
     </tr>
     <tr>
-      <td>LLaMa-3b-8b</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>AstroLLaMA-LLaMa-3b-8b</td>
-      <td>LLaMa-3b-8b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>QWen-7b</td>
-      <td>-</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>AstroLLaMA-QWen-7b</td>
-      <td>QWen-7b</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>Moonshot-v1</td>
+      <td>72.3</td>
     </tr>
   </tbody>
 </table>
+
+<p><br />
+<strong>Open-weights models:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Score (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Meta/LLaMA Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>LLaMA-2-7B</td>
+      <td>50.3</td>
+    </tr>
+    <tr>
+      <td>LLaMA-2-70B</td>
+      <td>70.7</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3-8B</td>
+      <td>72.9</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3-70B</td>
+      <td><strong>80.6</strong> 🥇</td>
+    </tr>
+    <tr>
+      <td><strong>Mistral AI Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.1</td>
+      <td>48.1</td>
+    </tr>
+    <tr>
+      <td>Mistral-8x7B-v0.1</td>
+      <td>73.7</td>
+    </tr>
+    <tr>
+      <td>Mixtral-8x22B-v0.1</td>
+      <td>77.7 🥈</td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.2</td>
+      <td>62.1</td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.3</td>
+      <td>63.9</td>
+    </tr>
+    <tr>
+      <td><strong>Microsoft/Phi Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Phi-2-3B</td>
+      <td>65.6</td>
+    </tr>
+    <tr>
+      <td>Phi-3-4B</td>
+      <td>71.7</td>
+    </tr>
+    <tr>
+      <td>Phi-3-14B</td>
+      <td>75.6</td>
+    </tr>
+    <tr>
+      <td><strong>Google/Gemma Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Gemma-1-2B</td>
+      <td>44.1</td>
+    </tr>
+    <tr>
+      <td>Gemma-1-7B</td>
+      <td>56.1</td>
+    </tr>
+    <tr>
+      <td>Gemma-2-9B</td>
+      <td>71.5</td>
+    </tr>
+    <tr>
+      <td>Gemma-2-27B</td>
+      <td>75.6</td>
+    </tr>
+    <tr>
+      <td><strong>Alibaba/Qwen(通义千问) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Qwen-1-7B</td>
+      <td>57.4</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-7B</td>
+      <td>63.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-14B</td>
+      <td>67.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-32B</td>
+      <td>73.2</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-110B</td>
+      <td>72.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-7B</td>
+      <td>68.0</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-57B</td>
+      <td>71.8</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-70B</td>
+      <td>77.7 🥈</td>
+    </tr>
+    <tr>
+      <td><strong>01/Yi(零一万物) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-6B</td>
+      <td>61.0</td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-9B</td>
+      <td>68.4</td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-34B</td>
+      <td>73.1</td>
+    </tr>
+    <tr>
+      <td><strong>Deepseek(深度求索) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Deepseek-67B</td>
+      <td>63.1</td>
+    </tr>
+    <tr>
+      <td><strong>Zhipu(智谱)/ChatGLM Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ChatGLM3-6B</td>
+      <td>50.4</td>
+    </tr>
+    <tr>
+      <td>GLM-4-9B</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <td><strong>PJ Lab(浦语)/InternLM(书生) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>InternLM-2.5-7B</td>
+      <td>64.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><strong>Cost and Performance Trade-off in Astronomical Q&amp;A</strong></p>
+
+<p><img src="figures/AstroBench.png" alt="Cost and performance trade-off in astronomical Q&amp;A" /></p>
+
+<p><strong>Caption:</strong> Cost and performance trade-off in astronomical Q&amp;A. The dual x-axes show the cost per 0.1 million tokens (typical for agent deployment on one astronomical source) and the cost to process an ArXiv astro-ph worth of tokens (~3B tokens). We use the average of input and output token costs. To avoid crowding, only <strong>representative models as of Septemeber 2024</strong> are shown; full performances are in Tables above.</p>
+
+<ul>
+  <li>Models with an outer circle indicate open-weights models run on low-cost APIs.</li>
+  <li>Dotted lines of the same color connect models of the same series.</li>
+  <li>Generally, within a series, there’s a 10-fold cost increase for a 3.5-point accuracy improvement.</li>
+  <li>Dashed guidelines show equivalent performance accounting for cost trade-offs, with the bold dashed line showing GPT-4o’s value.</li>
+  <li>A representative Wilson Score Interval as uncertainty, calculated for a 75% accuracy rate over the 4,425 questions, is displayed in the bottom right corner for reference.</li>
+</ul>
+
 
 </div>
 

@@ -183,6 +183,242 @@
 
 <p>Our benchmarking results reveal significant variations in performance across different proprietary large language models when tested on astronomy-specific questions. The following table summarizes the scores achieved by various models, grouped by their respective series. These results provide insights into the current capabilities of LLMs in handling complex astronomical concepts and questions. For a more comprehensive analysis and detailed discussion of these results, please refer to <a href="https://arxiv.org/abs/2407.11194">Ting et al. (2024)</a>.## Updated LLM Astronomy Performance Scores</p>
 
+<p><br /></p>
+<h3 id="open-weights-models">Open-Weights Models</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Score (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AstroMLab/AstroSage Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><span style="color: #3366cc;">AstroSage-8B (AstroMLab, de Haan et al., in prep)</span></td>
+      <td><span style="color: #3366cc;">79.1 </span></td>
+    </tr>
+    <tr>
+      <td><strong>Meta/LLaMA Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>LLaMA-2-7B</td>
+      <td>50.3</td>
+    </tr>
+    <tr>
+      <td><span style="color: #3366cc;">AstroLLaMA-2-7B (UniverseTBD, Perkowski et al., 2024)</span></td>
+      <td><span style="color: #3366cc;">44.3</span> 🔻</td>
+    </tr>
+    <tr>
+      <td>LLaMA-2-70B</td>
+      <td>70.7</td>
+    </tr>
+    <tr>
+      <td><span style="color: #3366cc;">AstroLLaMA-2-70B (AstroMLab, Pan et al., 2024)</span></td>
+      <td><span style="color: #3366cc;">72.3 ▲ </span></td>
+    </tr>
+    <tr>
+      <td>LLaMA-3-8B</td>
+      <td>72.9</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3-70B</td>
+      <td>80.4</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.1-8B</td>
+      <td>73.7</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.1-70B</td>
+      <td>80.1</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.1-405B</td>
+      <td><strong>83.8</strong> 🥇</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.2-11B</td>
+      <td>74.9</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.2-90B</td>
+      <td>80.6 🥈</td>
+    </tr>
+    <tr>
+      <td><strong>Mistral AI Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.1</td>
+      <td>48.1</td>
+    </tr>
+    <tr>
+      <td>Mistral-8x7B-v0.1</td>
+      <td>73.7</td>
+    </tr>
+    <tr>
+      <td>Mixtral-8x22B-v0.1</td>
+      <td>77.7</td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.2</td>
+      <td>62.1</td>
+    </tr>
+    <tr>
+      <td>Mistral-7B-v0.3</td>
+      <td>63.9</td>
+    </tr>
+    <tr>
+      <td>Mistral-12B-Nemo</td>
+      <td>71.6</td>
+    </tr>
+    <tr>
+      <td><strong>Microsoft/Phi Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Phi-2-3B</td>
+      <td>65.6</td>
+    </tr>
+    <tr>
+      <td>Phi-3-4B</td>
+      <td>71.7</td>
+    </tr>
+    <tr>
+      <td>Phi-3-14B</td>
+      <td>75.6</td>
+    </tr>
+    <tr>
+      <td><strong>Google/Gemma Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Gemma-1-2B</td>
+      <td>44.1</td>
+    </tr>
+    <tr>
+      <td>Gemma-1-7B</td>
+      <td>56.1</td>
+    </tr>
+    <tr>
+      <td>Gemma-2-2B</td>
+      <td>58.5</td>
+    </tr>
+    <tr>
+      <td>Gemma-2-9B</td>
+      <td>71.5</td>
+    </tr>
+    <tr>
+      <td>Gemma-2-27B</td>
+      <td>75.3</td>
+    </tr>
+    <tr>
+      <td><strong>Alibaba/Qwen(通义千问) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Qwen-1-7B</td>
+      <td>57.4</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-7B</td>
+      <td>63.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-14B</td>
+      <td>67.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-32B</td>
+      <td>73.2</td>
+    </tr>
+    <tr>
+      <td>Qwen-1.5-110B</td>
+      <td>72.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-7B</td>
+      <td>68.0</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-57B</td>
+      <td>71.8</td>
+    </tr>
+    <tr>
+      <td>Qwen-2-72B</td>
+      <td>77.7</td>
+    </tr>
+    <tr>
+      <td>Qwen-2.5-7B</td>
+      <td>70.4</td>
+    </tr>
+    <tr>
+      <td>Qwen-2.5-72B</td>
+      <td>78.6</td>
+    </tr>
+    <tr>
+      <td><strong>Nvidia/Nemotron Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Nemotron-340B</td>
+      <td>80.6 🥈</td>
+    </tr>
+    <tr>
+      <td><strong>01/Yi(零一万物) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-6B</td>
+      <td>61.0</td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-9B</td>
+      <td>68.4</td>
+    </tr>
+    <tr>
+      <td>Yi-1.5-34B</td>
+      <td>73.1</td>
+    </tr>
+    <tr>
+      <td><strong>Deepseek(深度求索) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Deepseek-67B</td>
+      <td>63.1</td>
+    </tr>
+    <tr>
+      <td><strong>Zhipu(智谱)/ChatGLM Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ChatGLM3-6B</td>
+      <td>50.4</td>
+    </tr>
+    <tr>
+      <td>GLM-4-9B</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <td><strong>PJ Lab(浦语)/InternLM(书生) Series</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>InternLM-2.5-7B</td>
+      <td>64.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
 <h3 id="proprietary-models">Proprietary Models</h3>
 
 <table>
@@ -388,235 +624,6 @@
     <tr>
       <td>Perplexity-Llama-3.1-Sonar-Large</td>
       <td>76.7</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="open-weights-models">Open-weights Models</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>Score (%)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Meta/LLaMA Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>LLaMA-2-7B</td>
-      <td>50.3</td>
-    </tr>
-    <tr>
-      <td><span style="color: #3366cc;">AstroLLaMA-2-7B (UniverseTBD, Perkowski et al., 2024)</span></td>
-      <td><span style="color: #3366cc;">44.3</span> 🔻</td>
-    </tr>
-    <tr>
-      <td>LLaMA-2-70B</td>
-      <td>70.7</td>
-    </tr>
-    <tr>
-      <td><span style="color: #3366cc;">AstroLLaMA-2-70B (AstroMLab, Pan et al., 2024)</span></td>
-      <td><span style="color: #3366cc;">72.3 ▲ </span></td>
-    </tr>
-    <tr>
-      <td>LLaMA-3-8B</td>
-      <td>72.9</td>
-    </tr>
-    <tr>
-      <td>LLaMA-3-70B</td>
-      <td>80.4</td>
-    </tr>
-    <tr>
-      <td>LLaMA-3.1-8B</td>
-      <td>73.7</td>
-    </tr>
-    <tr>
-      <td><span style="color: #3366cc;">AstroSage-8B (AstroMLab, de Haan et al., in prep)</span></td>
-      <td><span style="color: #3366cc;">77.2 ▲▲ </span></td>
-    </tr>
-    <tr>
-      <td>LLaMA-3.1-70B</td>
-      <td>80.1</td>
-    </tr>
-    <tr>
-      <td>LLaMA-3.1-405B</td>
-      <td><strong>83.8</strong> 🥇</td>
-    </tr>
-    <tr>
-      <td>LLaMA-3.2-11B</td>
-      <td>74.9</td>
-    </tr>
-    <tr>
-      <td>LLaMA-3.2-90B</td>
-      <td>80.6 🥈</td>
-    </tr>
-    <tr>
-      <td><strong>Mistral AI Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Mistral-7B-v0.1</td>
-      <td>48.1</td>
-    </tr>
-    <tr>
-      <td>Mistral-8x7B-v0.1</td>
-      <td>73.7</td>
-    </tr>
-    <tr>
-      <td>Mixtral-8x22B-v0.1</td>
-      <td>77.7</td>
-    </tr>
-    <tr>
-      <td>Mistral-7B-v0.2</td>
-      <td>62.1</td>
-    </tr>
-    <tr>
-      <td>Mistral-7B-v0.3</td>
-      <td>63.9</td>
-    </tr>
-    <tr>
-      <td>Mistral-12B-Nemo</td>
-      <td>71.6</td>
-    </tr>
-    <tr>
-      <td><strong>Microsoft/Phi Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Phi-2-3B</td>
-      <td>65.6</td>
-    </tr>
-    <tr>
-      <td>Phi-3-4B</td>
-      <td>71.7</td>
-    </tr>
-    <tr>
-      <td>Phi-3-14B</td>
-      <td>75.6</td>
-    </tr>
-    <tr>
-      <td><strong>Google/Gemma Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Gemma-1-2B</td>
-      <td>44.1</td>
-    </tr>
-    <tr>
-      <td>Gemma-1-7B</td>
-      <td>56.1</td>
-    </tr>
-    <tr>
-      <td>Gemma-2-2B</td>
-      <td>58.5</td>
-    </tr>
-    <tr>
-      <td>Gemma-2-9B</td>
-      <td>71.5</td>
-    </tr>
-    <tr>
-      <td>Gemma-2-27B</td>
-      <td>75.3</td>
-    </tr>
-    <tr>
-      <td><strong>Alibaba/Qwen(通义千问) Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Qwen-1-7B</td>
-      <td>57.4</td>
-    </tr>
-    <tr>
-      <td>Qwen-1.5-7B</td>
-      <td>63.7</td>
-    </tr>
-    <tr>
-      <td>Qwen-1.5-14B</td>
-      <td>67.7</td>
-    </tr>
-    <tr>
-      <td>Qwen-1.5-32B</td>
-      <td>73.2</td>
-    </tr>
-    <tr>
-      <td>Qwen-1.5-110B</td>
-      <td>72.7</td>
-    </tr>
-    <tr>
-      <td>Qwen-2-7B</td>
-      <td>68.0</td>
-    </tr>
-    <tr>
-      <td>Qwen-2-57B</td>
-      <td>71.8</td>
-    </tr>
-    <tr>
-      <td>Qwen-2-72B</td>
-      <td>77.7</td>
-    </tr>
-    <tr>
-      <td>Qwen-2.5-7B</td>
-      <td>70.4</td>
-    </tr>
-    <tr>
-      <td>Qwen-2.5-72B</td>
-      <td>78.6</td>
-    </tr>
-    <tr>
-      <td><strong>Nvidia/Nemotron Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Nemotron-340B</td>
-      <td>80.6 🥈</td>
-    </tr>
-    <tr>
-      <td><strong>01/Yi(零一万物) Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Yi-1.5-6B</td>
-      <td>61.0</td>
-    </tr>
-    <tr>
-      <td>Yi-1.5-9B</td>
-      <td>68.4</td>
-    </tr>
-    <tr>
-      <td>Yi-1.5-34B</td>
-      <td>73.1</td>
-    </tr>
-    <tr>
-      <td><strong>Deepseek(深度求索) Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Deepseek-67B</td>
-      <td>63.1</td>
-    </tr>
-    <tr>
-      <td><strong>Zhipu(智谱)/ChatGLM Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ChatGLM3-6B</td>
-      <td>50.4</td>
-    </tr>
-    <tr>
-      <td>GLM-4-9B</td>
-      <td>67.0</td>
-    </tr>
-    <tr>
-      <td><strong>PJ Lab(浦语)/InternLM(书生) Series</strong></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>InternLM-2.5-7B</td>
-      <td>64.5</td>
     </tr>
   </tbody>
 </table>

@@ -84,46 +84,41 @@
         <h1 class="page-title">Welcome to AstroMLab</h1>
       <h2 id="who-we-are">Who We Are</h2>
 
-<p>AstroMLab is a dynamic group of <em>astrophysicists</em> and <em>computer scientists</em> passionate about pushing the boundaries of <strong>Large Language Models (LLMs)in astronomy</strong>. Our team includes:</p>
+<p>AstroMLab is a dynamic group of <em>astrophysicists</em> and <em>computer scientists</em> developing <strong>Large Language Models (LLMs) for astronomy</strong>. Our team includes:</p>
 
 <ul>
   <li><em>Leading astronomers, astrophysicists, and cosmologists</em></li>
   <li><em>Top natural language processing experts</em> from Oak Ridge National Laboratory and Argonne National Laboratory</li>
   <li><em>Frontier arXivists</em> from the NASA Astrophysics Data System</li>
-  <li><em>Enthusiastic young researchers</em> bridging the gap between astronomy and LLMs</li>
+  <li><em>Enthusiastic young researchers</em> bridging astronomy and LLMs</li>
 </ul>
-
-<p>While LLMs are advancing rapidly, we believe that real progress in <em>AI-driven astronomical research</em> requires <em>deep domain knowledge</em>. This conviction drives us to tackle the challenges in applying LLMs to astronomy head-on.</p>
 
 <h2 id="our-goals">Our Goals</h2>
 
-<p>Our ultimate aim is to:</p>
-
 <ol>
   <li>Develop specialized LLMs for astronomy</li>
-  <li>Create <strong>reliable, light-weight, and open-source models</strong> adaptable for advanced research agents</li>
-  <li><strong>Expedite scientific discovery</strong> through LLM-driven end-to-end research</li>
-  <li>Push the boundaries of what’s possible in astronomical research</li>
+  <li>Create <strong>reliable, light-weight, and open-source models</strong> for research agents</li>
+  <li><strong>Expedite scientific discovery</strong> through LLM-driven research</li>
+  <li>Push the boundaries of astronomical research</li>
 </ol>
 
-<h2 id="our-achievements">Our Achievements</h2>
+<h2 id="our-outputs">Our Outputs</h2>
 
-<p>Despite being a young group, we’ve made significant strides:</p>
+<p>We’ve achieved:</p>
 
 <ul>
-  <li>Curated the <strong>first extensive astronomy-based benchmarking dataset</strong> using high-quality review articles (<a href="https://arxiv.org/abs/2407.11194">Ting et al. 2024</a>)</li>
-  <li>Explored training of specialized astronomy LLMs</li>
-  <li>Released three model sets:
+  <li>The <strong>first astronomy-based benchmarking dataset</strong> (<a href="https://arxiv.org/abs/2407.11194">Ting et al. 2024</a>)</li>
+  <li>Released four model sets:
     <ul>
-      <li><strong>AstroSage-8B</strong> (coming soon, de Haan et al. 2024)</li>
+      <li><strong>AstroSage-LLaMA-3.1-8B</strong> (<a href="https://arxiv.org/abs/2411.09012">de Haan et al. 2024</a>)</li>
       <li><strong>AstroLLaMA-2-70B</strong> (<a href="https://arxiv.org/abs/2407.11194">Pan et al. 2024</a>)</li>
       <li><strong>AstroLLaMA-3-8B</strong> (<a href="https://arxiv.org/abs/2407.11194">Pan et al. 2024</a>)</li>
-      <li>AstroLLaMA-2-7B (<a href="https://arxiv.org/abs/2401.01916">Perkowski et al. 2024</a>, <a href="https://arxiv.org/abs/2309.06126">Nguyen et al. 2023</a>, developed during our time at <em>UniverseTBD</em>)</li>
+      <li>AstroLLaMA-2-7B (<a href="https://arxiv.org/abs/2401.01916">Perkowski et al. 2024</a>, <a href="https://arxiv.org/abs/2309.06126">Nguyen et al. 2023</a>)</li>
     </ul>
   </li>
 </ul>
 
-<p>Our flagship model, AstroSage-8B, demonstrates remarkable performance when compared to other models in the 7B class. It achieves a substantial lead of 3.5 percentage points over its closest competitor, which translates to an estimated <strong>10-fold reduction</strong> in computational costs (see the <a href="benchmarking.html">AstroBench page</a> for details).</p>
+<p>Our flagship model, AstroSage-LLaMA-3.1-8B, achieves 80.9% accuracy on the AstroMLab-1 benchmark, <strong>comparable to OpenAI’s GPT-4o</strong> with an 8-point improvement over LLaMA-3.1-8B. It operates at a fraction of the cost of other models (see <a href="benchmarking.html">AstroBench</a>).</p>
 
 <table>
   <thead>
@@ -134,48 +129,40 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong><span style="color: #3366cc;">AstroSage-8B (AstroMLab)</span></strong></td>
-      <td><strong><span style="color: #3366cc;">79.1</span></strong></td>
+      <td>Claude-3.5-Sonnet</td>
+      <td>85.0</td>
     </tr>
     <tr>
-      <td><strong><span style="color: #3366cc;">AstroLLaMA-2-70B (AstroMLab)</span></strong></td>
-      <td><strong><span style="color: #3366cc;">76.0</span></strong></td>
+      <td>O1-Preview</td>
+      <td>81.6</td>
+    </tr>
+    <tr>
+      <td><strong><span style="color: #3366cc;">AstroSage-LLaMA-3.1-8B (AstroMLab)</span></strong></td>
+      <td><strong><span style="color: #3366cc;">80.9</span></strong></td>
+    </tr>
+    <tr>
+      <td>Mistral-Large-2</td>
+      <td>80.8</td>
+    </tr>
+    <tr>
+      <td>O1-Mini</td>
+      <td>80.1</td>
+    </tr>
+    <tr>
+      <td>Grok-Beta</td>
+      <td>79.5</td>
+    </tr>
+    <tr>
+      <td>Gemini-1.5-Pro-002</td>
+      <td>78.2</td>
     </tr>
     <tr>
       <td>LLaMA-3.1-8B</td>
       <td>73.7</td>
     </tr>
     <tr>
-      <td>Phi-3.5-4B</td>
-      <td>72.8</td>
-    </tr>
-    <tr>
-      <td>Gemma-2-9B</td>
-      <td>71.5</td>
-    </tr>
-    <tr>
-      <td>LLaMA-2-70B</td>
-      <td>70.7</td>
-    </tr>
-    <tr>
-      <td>Qwen-2.5-7B</td>
-      <td>70.4</td>
-    </tr>
-    <tr>
-      <td>Yi-1.5-9B</td>
-      <td>68.4</td>
-    </tr>
-    <tr>
-      <td>InternLM-2.5-7B</td>
-      <td>64.5</td>
-    </tr>
-    <tr>
-      <td>Mistral-7B-v0.3</td>
-      <td>63.9</td>
-    </tr>
-    <tr>
-      <td>ChatGLM3-6B</td>
-      <td>50.4</td>
+      <td><strong><span style="color: #3366cc;">AstroLLaMA-2-70B (AstroMLab)</span></strong></td>
+      <td><strong><span style="color: #3366cc;">72.3</span></strong></td>
     </tr>
     <tr>
       <td>AstroLLaMA-2-7B (UniverseTBD)</td>
@@ -186,33 +173,20 @@
 
 <p><img src="figures/AstroBench.png" alt="Cost and performance trade-off in astronomical Q&amp;A" /></p>
 
-<p>The exceptional performance of AstroSage-8B showcases the potential for more efficient and cost-effective agentic research in astronomy. This advancement opens up new possibilities for widespread application of AI in astronomical research, making sophisticated analysis more accessible to a broader range of institutions and researchers.</p>
-
 <h2 id="open-source-commitment">Open Source Commitment</h2>
 
-<p>We are fully committed to open source:</p>
+<p>All our models are available on <a href="https://huggingface.co/AstroMLab">Hugging Face</a></p>
+
+<h2 id="our-support">Our Support</h2>
 
 <ul>
-  <li>All our models are released on <strong>Hugging Face</strong></li>
-  <li>Find our models here: <a href="https://huggingface.co/AstroMLab">AstroMLab on Hugging Face</a></li>
-</ul>
-
-<h2 id="our-support-and-vision">Our Support and Vision</h2>
-
-<p>We are grateful for our supporters:</p>
-
-<ul>
-  <li>Access to the Frontier nodes at Oak Ridge Leadership Computing Facility</li>
-  <li>Backing from Microsoft’s Accelerating Foundation Models Research (AFMR)</li>
+  <li>Access to Frontier nodes at Oak Ridge Leadership Computing Facility</li>
+  <li>Microsoft’s Accelerating Foundation Models Research (AFMR)</li>
 </ul>
 
 <h2 id="join-us">Join Us</h2>
 
-<p>Our team is expanding, and we’d love to hear from you!</p>
-
-<ul>
-  <li>Contact us: <a href="mailto:astromachinelearninglab@gmail.com">astromachinelearninglab@gmail.com</a></li>
-</ul>
+<p>Contact us: <a href="mailto:astromachinelearninglab@gmail.com">astromachinelearninglab@gmail.com</a></p>
 
 <p><br /></p>
 
@@ -272,19 +246,18 @@
 
 <h2 id="publications">Publications</h2>
 
-<h3 id="astromlab-1-who-wins-astronomy-jeopardy">AstroMLab 1: Who Wins Astronomy Jeopardy!?</h3>
+<h3 id="astromlab-3-achieving-gpt-4o-level-performance-in-astronomy-with-a-specialized-8b-parameter-large-language-model">AstroMLab 3: Achieving GPT-4o Level Performance in Astronomy with a Specialized 8B-Parameter Large Language Model</h3>
 
-<p><strong><a href="https://arxiv.org/abs/2407.11194">Yuan-Sen Ting, et al., 2024, arXiv:2407.11194</a></strong></p>
+<p><strong><a href="https://arxiv.org/abs/2411.09012">Tijmen de Haan, et al., 2024</a></strong></p>
 
-<p>We present a comprehensive evaluation of proprietary and open-weights large language models using the first astronomy-specific benchmarking dataset. This dataset comprises 4,425 multiple-choice questions curated from the Annual Review of Astronomy and Astrophysics, covering a broad range of astrophysical topics.</p>
+<p>We present AstroSage-LLaMA-3.1-8B, a domain-specialized natural-language AI assistant tailored for research in astronomy, astrophysics, and cosmology. Through extensive data curation, massive continued pre-training, and supervised fine-tuning, we demonstrate that proper specialization of a relatively small model can achieve performance comparable to much larger flagship models.</p>
 
-<p>Key findings:</p>
+<p>Key points:</p>
 <ul>
-  <li>Claude-3.5-Sonnet outperforms competitors, achieving 85.0% accuracy.</li>
-  <li>Open-weights models like LLaMA-3-70b (80.6%) and Qwen-2-72b (77.7%) now compete with some of the best proprietary models.</li>
-  <li>We identify performance variations across astronomical subfields, with challenges in exoplanet-related fields, stellar astrophysics, and instrumentation.</li>
-  <li>Top-performing models demonstrate well-calibrated confidence, with correlations above 0.9 between confidence and correctness.</li>
-  <li>The rapid progress suggests that LLM-driven research in astronomy may become feasible in the near future.</li>
+  <li>Achieved 80.9% accuracy on the AstroMLab-1 benchmark, performing on par with GPT-4o while using only 8B parameters</li>
+  <li>Demonstrated an 8-point improvement over the base LLaMA-3.1-8B model through domain specialization</li>
+  <li>Maintained strong general capabilities in reasoning, mathematics, and coding despite optimization for astronomy</li>
+  <li>Combined continued pre-training, supervised fine-tuning, and model merging techniques to enhance both domain expertise and instruction-following capabilities</li>
 </ul>
 
 <p><br /></p>
@@ -300,6 +273,23 @@
   <li>Previously released AstroLLaMA series (based on LLaMA-2-7B) underperforms compared to the native LLaMA model.</li>
   <li>Performance degradation can be partially mitigated by using high-quality data for continual pretraining.</li>
   <li>Continual pretraining on the 70B model can yield improvements, despite observed catastrophic forgetting in smaller models.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="astromlab-1-who-wins-astronomy-jeopardy">AstroMLab 1: Who Wins Astronomy Jeopardy!?</h3>
+
+<p><strong><a href="https://arxiv.org/abs/2407.11194">Yuan-Sen Ting, et al., 2024, arXiv:2407.11194</a></strong></p>
+
+<p>We present a comprehensive evaluation of proprietary and open-weights large language models using the first astronomy-specific benchmarking dataset. This dataset comprises 4,425 multiple-choice questions curated from the Annual Review of Astronomy and Astrophysics, covering a broad range of astrophysical topics.</p>
+
+<p>Key findings:</p>
+<ul>
+  <li>Claude-3.5-Sonnet outperforms competitors, achieving 85.0% accuracy.</li>
+  <li>Open-weights models like LLaMA-3-70b (80.6%) and Qwen-2-72b (77.7%) now compete with some of the best proprietary models.</li>
+  <li>We identify performance variations across astronomical subfields, with challenges in exoplanet-related fields, stellar astrophysics, and instrumentation.</li>
+  <li>Top-performing models demonstrate well-calibrated confidence, with correlations above 0.9 between confidence and correctness.</li>
+  <li>The rapid progress suggests that LLM-driven research in astronomy may become feasible in the near future.</li>
 </ul>
 
 <p><br /></p>

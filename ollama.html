@@ -83,23 +83,23 @@
       <div class="page">
         <h1 class="page-title">Running Models on Your Laptop</h1>
       <div class="page">
-  <p>We’re preparing to release <strong>AstroSage-8B</strong> (de Haan et al., in prep.), our flagship 8B parameter model for astronomy.</p>
+  <p>We have released <strong>AstroSage-LLaMA-3.1-8B</strong> (<a href="https://arxiv.org/abs/2411.09012">de Haan et al. 2024</a>), our flagship 8B parameter model for astronomy, now available in GGUF format for efficient local deployment.</p>
+
+<p>The model is available on <a href="https://huggingface.co/AstroMLab/AstroSage-8B-GGUF">Hugging Face</a> in two quantized versions:</p>
 
 <ul>
-  <li>Top-performing 8B model in astronomy Q&amp;A</li>
-  <li>Rivals 70B models in astronomy Q&amp;A compared to Qwen-2.5-72B (and GPT-4o).</li>
-  <li>Aims for affordability and accessibility in astronomy research</li>
+  <li><strong>AstroSage-8B-BF16.gguf</strong>: BFloat16 precision for maximum accuracy</li>
+  <li><strong>AstroSage-8B-Q8_0.gguf</strong>: 8-bit quantized for more efficient deployment</li>
 </ul>
 
-<p>We’re currently:</p>
+<p>Key Features:</p>
+<ul>
+  <li>CPU-friendly inference on standard laptops</li>
+  <li>Compatible with llama.cpp ecosystem</li>
+  <li>Maintains core capabilities of the original model while optimizing for local deployment</li>
+</ul>
 
-<ol>
-  <li>Quantizing the model for memory efficiency</li>
-  <li>Optimizing for Ollama to run on standard laptops</li>
-  <li>Benchmarking performance on local machines</li>
-</ol>
-
-<p>Check back in a month!</p>
+<p>For detailed installation instructions, usage examples, and comprehensive documentation, please visit our <a href="https://huggingface.co/AstroMLab/AstroSage-8B-GGUF">Hugging Face model page</a>.</p>
 
 </div>
 

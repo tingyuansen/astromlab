@@ -104,12 +104,13 @@
 
 <h2 id="our-outputs">Our Outputs</h2>
 
-<p>We’ve achieved:</p>
+<p>We've achieved:</p>
 
 <ul>
   <li>The <strong>first astronomy-based benchmarking dataset</strong> (<a href="https://arxiv.org/abs/2407.11194">Ting et al. 2024</a>)</li>
-  <li>Released four model sets:
+  <li>Released five model sets:
     <ul>
+      <li><strong>AstroSage-LLaMA-3.1-70B</strong> (<a href="https://arxiv.org/abs/2505.17592">de Haan et al. 2025b</a>)</li>
       <li><strong>AstroSage-LLaMA-3.1-8B</strong> (<a href="https://arxiv.org/abs/2411.09012">de Haan et al. 2024</a>)</li>
       <li><strong>AstroLLaMA-2-70B</strong> (<a href="https://arxiv.org/abs/2407.11194">Pan et al. 2024</a>)</li>
       <li><strong>AstroLLaMA-3-8B</strong> (<a href="https://arxiv.org/abs/2407.11194">Pan et al. 2024</a>)</li>
@@ -118,7 +119,7 @@
   </li>
 </ul>
 
-<p>Our flagship model, AstroSage-LLaMA-3.1-8B, achieves 80.9% accuracy on the AstroMLab-1 benchmark, <strong>comparable to OpenAI’s GPT-4o</strong> with an 8-point improvement over LLaMA-3.1-8B. It operates at a fraction of the cost of other models (see <a href="benchmarking.html">AstroBench</a>).</p>
+<p>Our flagship models, AstroSage-LLaMA-3.1-70B and AstroSage-LLaMA-3.1-8B, achieve 86.2% and 80.9% accuracy respectively on the AstroMLab-1 benchmark. The 70B model ties with Claude-4-Opus for the highest performance, while the 8B model performs comparably to Mistral-Large-v2 at a fraction of the cost (see <a href="benchmarking.html">AstroBench</a>).</p>
 
 <table>
   <thead>
@@ -129,43 +130,99 @@
   </thead>
   <tbody>
     <tr>
-      <td>Claude-3.5-Sonnet</td>
+      <td><strong><span style="color: #3366cc;">AstroSage-LLaMA-3.1-70B (AstroMLab)</span></strong></td>
+      <td><strong><span style="color: #3366cc;">86.2</span></strong></td>
+    </tr>
+    <tr>
+      <td>Claude-4-Opus</td>
+      <td>86.3</td>
+    </tr>
+    <tr>
+      <td>o3</td>
+      <td>85.4</td>
+    </tr>
+    <tr>
+      <td>Claude-4-Sonnet</td>
       <td>85.0</td>
     </tr>
     <tr>
-      <td>O1-Preview</td>
-      <td>81.6</td>
+      <td>GPT-4.1</td>
+      <td>84.7</td>
+    </tr>
+    <tr>
+      <td>o4-Mini</td>
+      <td>84.7</td>
+    </tr>
+    <tr>
+      <td>Gemini-2.5-Pro</td>
+      <td>84.8</td>
+    </tr>
+    <tr>
+      <td>Deepseek-R1</td>
+      <td>84.4</td>
+    </tr>
+    <tr>
+      <td>Qwen-3-235B</td>
+      <td>84.0</td>
+    </tr>
+    <tr>
+      <td>LLaMA-4-Maverick</td>
+      <td>83.4</td>
+    </tr>
+    <tr>
+      <td>Deepseek-v3-2503</td>
+      <td>82.9</td>
+    </tr>
+    <tr>
+      <td>Gemini-2.5-Flash-0520</td>
+      <td>82.3</td>
+    </tr>
+    <tr>
+      <td>LLaMA-4-Scout</td>
+      <td>82.2</td>
+    </tr>
+    <tr>
+      <td>Grok-3</td>
+      <td>81.7</td>
+    </tr>
+    <tr>
+      <td>Mistral-Medium-v3</td>
+      <td>81.8</td>
     </tr>
     <tr>
       <td><strong><span style="color: #3366cc;">AstroSage-LLaMA-3.1-8B (AstroMLab)</span></strong></td>
       <td><strong><span style="color: #3366cc;">80.9</span></strong></td>
     </tr>
     <tr>
-      <td>Mistral-Large-2</td>
+      <td>Mistral-Large-v2</td>
       <td>80.8</td>
     </tr>
     <tr>
-      <td>O1-Mini</td>
-      <td>80.1</td>
+      <td>Qwen-3-32B</td>
+      <td>79.7</td>
     </tr>
     <tr>
-      <td>Grok-Beta</td>
-      <td>79.5</td>
+      <td>Mistral-Small-v3.1</td>
+      <td>78.6</td>
     </tr>
     <tr>
-      <td>Gemini-1.5-Pro-002</td>
-      <td>78.2</td>
+      <td>GPT-4.1-Nano</td>
+      <td>78.0</td>
     </tr>
     <tr>
-      <td>LLaMA-3.1-8B</td>
-      <td>73.7</td>
+      <td>Gemini-2-Flash-Lite</td>
+      <td>78.4</td>
     </tr>
     <tr>
-      <td><strong><span style="color: #3366cc;">AstroLLaMA-2-70B (AstroMLab)</span></strong></td>
-      <td><strong><span style="color: #3366cc;">72.3</span></strong></td>
+      <td>Gemma-3-27B</td>
+      <td>76.9</td>
     </tr>
     <tr>
-      <td>AstroLLaMA-2-7B (UniverseTBD)</td>
+      <td>Qwen-3-14B</td>
+      <td>76.4</td>
+    </tr>
+    <tr>
+      <td>AstroLLaMA-2-7B</td>
       <td>44.3</td>
     </tr>
   </tbody>
@@ -246,9 +303,25 @@
 
 <h2 id="publications">Publications</h2>
 
+<h3 id="astromlab-4-benchmark-topping-performance-in-astronomy-qa-with-70b-parameter-domain-specialized-reasoning-model">AstroMLab 4: Benchmark-Topping Performance in Astronomy Q&A with a 70B-Parameter Domain-Specialized Reasoning Model</h3>
+
+<p><strong><a href="https://arxiv.org/abs/2505.17592">Tijmen de Haan, et al., 2025b</a></strong></p>
+
+<p>We present AstroSage-LLaMA-3.1-70B, a 70-billion parameter domain-specialized language model that achieves state-of-the-art performance on astronomical knowledge tasks. Built from Meta-Llama-3.1-70B through extensive continued pre-training on astronomical literature, supervised fine-tuning, and model merging, it demonstrates that domain specialization can enable specialized models to outperform even the most advanced commercial alternatives.</p>
+
+<p>Key points:</p>
+<ul>
+  <li>Achieved 86.2% accuracy on Astrobench, outperforming all tested models including o3, GPT-4.1, Claude-3.7-Sonnet, and Gemini-2.5-Pro</li>
+  <li>Demonstrates ~100× improvement in cost-efficiency compared to achieving similar performance with general-purpose models</li>
+  <li>Incorporates explicit reasoning capabilities that can be activated for complex multi-step astronomical analysis</li>
+  <li>Openly available under Llama 3.1 Community License to accelerate AI adoption in astronomy research and education</li>
+</ul>
+
+<p><br /></p>
+
 <h3 id="astromlab-3-achieving-gpt-4o-level-performance-in-astronomy-with-a-specialized-8b-parameter-large-language-model">AstroMLab 3: Achieving GPT-4o Level Performance in Astronomy with a Specialized 8B-Parameter Large Language Model</h3>
 
-<p><strong><a href="https://arxiv.org/abs/2411.09012">Tijmen de Haan, et al., 2024</a></strong></p>
+<p><strong><a href="https://arxiv.org/abs/2411.09012">Tijmen de Haan, et al., 2025a</a></strong></p>
 
 <p>We present AstroSage-LLaMA-3.1-8B, a domain-specialized natural-language AI assistant tailored for research in astronomy, astrophysics, and cosmology. Through extensive data curation, massive continued pre-training, and supervised fine-tuning, we demonstrate that proper specialization of a relatively small model can achieve performance comparable to much larger flagship models.</p>
 
